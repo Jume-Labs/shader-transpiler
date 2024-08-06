@@ -1,0 +1,38 @@
+{
+  "name": "@jume-labs/shader-transpiler",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "jume-shaders": "dist/index.js"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "prepare": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint src",
+    "prettier": "prettier src --check",
+    "test": "vitest run"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Codescapade",
+  "license": "MIT",
+  "devDependencies": {
+    "@jume-labs/eslint-config": "^1.0.0",
+    "@jume-labs/prettier-config": "^1.0.1",
+    "@types/node": "^22.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.3"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}
