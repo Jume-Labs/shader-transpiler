@@ -22,7 +22,7 @@ function transpile(inputFolder: string, outputFolder: string): void {
       const info = Path.parse(fullPath);
       const extension = info.ext.substring(1);
       if (extension === 'vert' || extension === 'frag') {
-        process.stdout.write(`transpiling ${info.name}`);
+        process.stdout.write(`transpiling ${info.name}${info.ext}\n`);
         const source = readFileSync(fullPath, 'utf8').toString();
         writeFileSync(Path.join(fullOutputPath, file), source);
 
@@ -32,7 +32,7 @@ function transpile(inputFolder: string, outputFolder: string): void {
       }
     }
   }
-  process.stdout.write('Shader transpilation complete');
+  process.stdout.write('Shader transpilation complete.\n');
 }
 
 const program = new Command();
